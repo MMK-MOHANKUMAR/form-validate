@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container ">
+        <!-- <div class="col-8-lg, col-8-md, col-4-sm, col-4-xs"> -->
+        <div class="card  sun ">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-7 col-sm-8 col-md-10 mg ">
+                        <h3 class="mt-2">Enquiry Form</h3>
+                    </div>
+                    <div class="col-5 col-sm-4 col-md-2 mg ">
+                        <div class="logo mt-2">e!</div>
+                        <h6><span style="color: blue; font-weight: bold;">edureka !</span> <span class="badge bg ">
+                                Learning</span> center!</h6>
+                    </div>
+                    <!-- <div class="card "> -->
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <form action="#" id="form">
+                                    <label for="date">Date </label>
+                                    <input type="date" class="mb-3 mt-3 date">
+                                    <h6 class="mb-3">PERSONAL INFORMATION</h6>
+                                    <!-- first name -->
+                                    <div class="inputgroups">
+                                        <label for="first name">
+                                            <h6>First Name:<span style="color: red;">*</span></h6>
+                                        </label>
+                                        <input type="text" class="moon form-control mb-3" id="username"
+                                            placeholder="Please Enter Your First Name">
+                                        <small></small>
+                                    </div>
+                                    <!-- last name -->
+                                    <div class="inputgroups">
+                                        <label for="last name">
+                                            <h6>Last Name:<span style="color: red;">*</span> </h6>
+                                        </label>
+                                        <input type="text" class="moon form-control mb-3 moon" id="lastname"
+                                            placeholder="Please Enter Your Last Name">
+                                        <small></small>
+                                    </div>
+
+                                    <label for="date of birth">
+                                        <h6>Date Of Birth</h6>
+                                    </label>
+                                    <input type="date" class="form-control mb-3">
+                                    <div class="inputgroups">
+                                        <label for="email">
+                                            <h6>Enter Your Email Id <span style="color: red;">*</span></h6>
+                                        </label>
+                                        <input type="text" class="form-control mb-3 moon" id="email"
+                                            placeholder="Enter Your Email Id" />
+                                        <small></small>
+                                    </div>
+                                    <div class="inputgroups">
+                                        <label for="address">
+                                            <h6>Enter Your Address <span style="color: red;">*</span></h6>
+                                        </label>
+                                        <input type="text" id="address" class="form-control mb-3 moon"
+                                            placeholder="Enter Your Adress">
+                                        <small></small>
+                                    </div>
+                                    <div class="inputgroups">
+                                        <label for="number">
+                                            <h6>Mobile Number <span style="color: red;">*</span></h6>
+                                        </label>
+                                        <input type="number" id="number" class="form-control mb-3 moon">
+                                        <small></small>
+                                    </div>
+                                    
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <label for="pincode">
+                                    <h6>Pincode :</h6>
+                                </label>
+                                <input type="text" id="pincode" class="mb-3 form-control">
+                                <!-- <label>
+                                    <h6 >State :</h6>
+                                </label> -->
+                                <select class="form-select form-label mb-3 ">
+                                    <option>Select Your State :</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Karnataka</option>
+                                    <option>Andra Pradesh</option>
+                                    <option>Delhi</option>
+                                    <option>Telugana</option>
+                                    <option>Mathiya Pradesh</option>
+                                    <option>Behar</option>
+                                </select>
+                                <!-- <label ><h6>Cities :</h6></label> -->
+                                <select class=" form-select  form-label mb-3">
+                                    <option>Select Your Cities</option>
+                                    <option>Ariyalur</option>
+                                    <option>Chengalpattu</option>
+                                    <option>Chennai</option>
+                                    <option>Coimbatore</option>
+                                    <option>Cuddalore</option>
+                                    <option>Dharmapuri</option>
+                                    <option>Dindigul</option>
+                                    <option>Erode</option>
+                                    <option>Kallakurichi</option>
+                                    <option>Kancheepuram</option>
+                                    <option>Karur</option>
+                                    <option>Krishnagiri</option>
+                                    <option>Madurai</option>
+                                    <option>Mayiladuthurai</option>
+                                    <option>Nagapattinam</option>
+                                    <option>Nagercoil</option>
+                                    <option>Namakkal</option>
+                                    <option>Perambalur</option>
+                                    <option>Pudukkottai</option>
+                                    <option>Ramanathapuram</option>
+                                    <option>Ranipet</option>
+                                    <option>Salem</option>
+                                    <option>Sivagangai</option>
+                                    <option>Tenkasi</option>
+                                    <option>Thanjavur</option>
+                                    <option>Theni</option>
+                                    <option>Thiruvallur</option>
+                                    <option>Thiruvarur</option>
+                                    <option>Thoothukudi</option>
+                                    <option>Tiruchirappalli</option>
+                                    <option>Tiruvannamalai</option>
+                                    <option>Tirupathur</option>
+                                    <option>Tiruppur</option>
+                                    <option>Tiruvannamalai</option>
+                                    <option>Tirupathur</option>
+                                    <option>Tiruppur</option>
+                                    <option>Tiruvannamalai</option>
+                                    <option>Udagamandalam (Ootacamund)</option>
+                                    <option>Vellore</option>
+                                    <option>Viluppuram</option>
+                                    <option>Virudhunagar</option>
+
+                                </select>
+                                <h6 class="mb-3 mt-3">QUALIFACTION :</h6>
+                                <select id="person" class=" form-select  form-label mt-3">
+                                <option select hidden>Professional</option>
+                                <option value="stu" id="stu">Students</option>
+                                <option value="emp" id="emp">Employee</option>
+                            </select>
+                            </div>
+                            <div id="temp">
+                                <h6 class="mb-3">STUDENT DETAILS :</h6>
+                                <h6>Name Of The College :</h6>
+                                <input type="text" class="form-control mb-3">
+                                <!-- <label for="name"></label> -->
+                                <h6> Year Of Study :</h6>
+
+                                <!-- <input type="date" class="form-control mb-3"> -->
+                                <select class="form-select  form-label mb-3">
+                                    <option select hidden>Year Of Study</option>
+                                    <option>-</option>
+                                    <option>2009</option>
+                                    <option>2010</option>
+                                    <option>2011</option>
+                                    <option>2012</option>
+                                    <option>2013</option>
+                                    <option>2014</option>
+                                    <option>2015</option>
+                                    <option>2016</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                </select>
+                            </div>
+                            <div id="temps">
+                                <h6 class="mb-3">EMPLOYEE DETAILS :</h6>
+                                <h6>Name Of Organisation :</h6>
+                                <input type="text" id="employee" class="form-control mb-3">
+                                <h6>Year Of Experience :</h6>
+                                <input type="text" id="employee" class="form-control mb-3">
+                            </div>
+                            
+                            <label class="d-block form-check form-check-inline" for="man">
+                                <h6>How did you get to know about Edureka ? </h6>
+                            </label>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input ">From Friend
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input ">Paper Ads
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input ">Tv Ads
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input ">Social Media
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input">Hoardings
+                            </div>
+                        </div>
+                        <div class="col text-center  btn-xl ">
+                            <button type="submit" class="btn btn-danger btn-lg ">Submit</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="javascrip.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
