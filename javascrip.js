@@ -1,21 +1,20 @@
 
-let form = document.getElementById("form")
+let form = document.querySelector("#form")
 let username = document.getElementById("username")
 let email = document.getElementById("email")
 let lastname = document.getElementById("lastname")
 let number = document.getElementById("number")
 let address = document.getElementById("address")
-let moon=document.getElementsByClassName("moon")
+// let submit=document.getElementById("submit")
 
-
-// console.log(form);
-form.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    formvalidation()
+form.addEventListener('submit',(e)=>{
     
- form.addEventListener("input",() =>{
+   if( !formvalidation()){
+    e.preventDefault();
+   } 
+      form.addEventListener("input",() =>{
      formvalidation()
-   })
+    })
 })
 function formvalidation(){
     let usernameValue=username.value.trim();
@@ -23,19 +22,11 @@ function formvalidation(){
     let emailValue=email.value.trim();
     let numbervalue=number.value.trim();
     let addressvalue=address.value.trim();
-    let userList=JSON.parse(localStorage.getItem("userinformation"))|| [];
+    let success=true
 
-    userList.push({
-        "Name":usernameValue,
-        "Last Nmae":lastnameValue,
-        "Email":emailValue,
-        "Number":numbervalue,
-        "Address":addressvalue,
-
-    });
-    localStorage.setItem("userinformation",JSON.stringify(userList))
 
     if(usernameValue===""){
+        success=false
        
         setError(username,"Please Enter First Name")
     }
@@ -44,14 +35,14 @@ function formvalidation(){
         setSuccess(username)
     }
     if(lastnameValue===""){
-        
+    success=false
         setError(lastname,"Please Enter Last  Name")
     }
     else{
 
         setSuccess(lastname)
     }if(numbervalue===""){
-       
+        success=false
         setError(number," Enter Mobile Number  Name")
     }
     else{
@@ -59,7 +50,7 @@ function formvalidation(){
         setSuccess(number)
     }
     if(addressvalue===""){
-       
+         success=false
         setError(address,"Please Enter Address")
     }
     else{
@@ -68,26 +59,27 @@ function formvalidation(){
     }
 
     if(emailValue===""){
-        
+         success=false
         setError(email,"Enter your email Id")
     }
     else if (!validateEmail(emailValue)){
-       
+         success=false
         setError(email,"please enter valid email")
     }
     else{
         setSuccess(email)
     }
 
-   
+    return success;
 }
+
 function setError(element,message){ 
     let inputgro=element.parentElement;
     let errorElement=inputgro.querySelector("small")
 
     errorElement.innerText=message;
     inputgro.classList=("error input")
-    // inputgro.classList.remove("success")
+    inputgro.classList.remove(".success")
 }
 function setSuccess(element){
     let inputgro=element.parentElement;
@@ -95,7 +87,7 @@ function setSuccess(element){
 
     errorElement.innerText="";
     inputgro.classList=("success input")
-    // inputgro.classList.add("error")
+    inputgro.classList.add(".error")
    
 } 
 const validateEmail = (email) => {
